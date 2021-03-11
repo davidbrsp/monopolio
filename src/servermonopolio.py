@@ -41,15 +41,14 @@ class ServerMonopolioBack(BaseHTTPRequestHandler):
 class ServerMonopolioFront(BaseHTTPRequestHandler):
     ffm = fm.FrontMonopolio()
 
-    def do_GET(self) -> None:
-
-        if self.path.endswith('/form'):
-            self.send_response(200)
-            self.send_header('Content-type', 'text/html')
-            self.end_headers()
-            # Read the file and send the contents
-            with open('form.html', 'rb') as file:
-                self.wfile.write(bytes(file.read(), 'utf8'))
+    def do_GET(self):
+        # if self.path.endswith('/form'):
+        #     self.send_response(200)
+        #     self.send_header('Content-type', 'text/html')
+        #     self.end_headers()
+        #     # Read the file and send the contents
+        #     with open('form.html', 'rb') as file:
+        #         self.wfile.write(bytes(file.read(), 'utf8'))
         if self.path.endswith('/text'):
             self.send_response(200)
             self.send_header('Content-type', 'text/plain')
@@ -78,7 +77,7 @@ class ThreadingHTTPServer(ThreadingMixIn, HTTPServer):
 
 def serve_on_port(port, HTTPServer):
     server = ThreadingHTTPServer(("localhost", port), HTTPServer)
-    print(f"INICIANDO: http://localhost:{port}")
+    print(f"INICIANDO: http://localhost:{port}\n")
     server.serve_forever()
 
 
