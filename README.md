@@ -42,3 +42,10 @@ Para realizar alguns testes (unit e mock):
 
     Quando o jogador ganha a cada rodada
 
+Melhorias a serem implantadas (trabalho em progresso):
+
+* Ainda de forma experimental, é possível usar o arquivo ".src/form.html" aberto diretamente no navegador (duplo clique no arquivo em muitos sistemas) para solicitar para a api diferentes resultados. O proximo passo e colocar esse arquivo para ser servido diretamente pelo http.server.
+
+* Melhorar o testes (unit mock)
+
+* Refatorar o metodo *partida()*
