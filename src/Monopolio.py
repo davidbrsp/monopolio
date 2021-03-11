@@ -133,6 +133,15 @@ class Monopolio:
         }) or d, jogadores))
         jogadores = sorted(jogadores, key=lambda k: k['porcentagem'], reverse=True)
         self.simulacao_dict = {
+            'parametros': {
+                'max_simulacoes': self.max_simulacoes,
+                'numero_de_casas': self.numero_de_casas,
+                'max_rodadas': self.max_rodadas,
+                'max_venda': self.max_venda,
+                'porcentagem_min_venda': self.porcentagem_min_venda,
+                'porcentagem_aluguel': self.porcentagem_aluguel,
+                'bonus_da_rodada': self.bonus_da_rodada,
+            },
             # Quantas partidas terminam por time out (1000 rodadas)
             'numero_timeouts': turnos.count(self.max_rodadas),
             'media_de_turnos': int(media_de_turnos),
@@ -143,8 +152,8 @@ class Monopolio:
             # Qual o comportamento que mais vence
             'mais_vence': jogadores[0]['nome'],
         }
-        self.to_text()
-        self.to_html()
+        # self.to_text()
+        # self.to_html()
 
     def to_text(self):
         if self.simulacao_dict:
@@ -178,6 +187,7 @@ def main():
     # max_simulacoes=300, numero_de_casas=20, max_rodadas=1000, max_venda=1000, porcentagem_min_venda=.75,
     # porcentagem_aluguel=.25)
     # text_str = mp.text_str
+    mp.to_text()
     print(mp.text_str)
     # print(mp.html_str)
 

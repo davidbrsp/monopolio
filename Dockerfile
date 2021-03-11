@@ -5,6 +5,8 @@ EXPOSE 8000
 # set the working directory in the container
 WORKDIR /code
 
+ENV PYTHONUNBUFFERED=1
+
 # copy the dependencies file to the working directory
 #COPY requirements.txt .
 
@@ -15,4 +17,4 @@ WORKDIR /code
 COPY src/ .
 
 # command to run on container start
-CMD [ "python", "./servermonopolio.py" ]
+CMD [ "python", "_servermonopolio.py" ]

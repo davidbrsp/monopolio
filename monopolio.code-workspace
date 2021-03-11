@@ -5,7 +5,8 @@
 		}
 	],
 	"settings": {
-		"atomKeymap.promptV3Features": false
+		"atomKeymap.promptV3Features": false,
+		"python.pythonPath": "/usr/local/Caskroom/miniconda/base/bin/python"
 	},
 	"launch": {
 		"version": "0.2.0",

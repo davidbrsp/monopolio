@@ -1,0 +1,32 @@
+<html>
+    <header>
+        <title>teste</title>
+    </header>
+<body>
+    <div id="divparametros" style="display: table;">
+        <form action="/api/monopolio">
+            <fieldset style="display: grid">
+                <legend> Mudar parametros: </legend>
+                <label for="parametros">Maximo de simulacoes:</label>
+                <input type="number" id="ms" name="ms" value="300" placeholder="300" step="1" min="1">
+                <label for="parametros">Numero de casas:</label>
+                <input type="number" id="ndc" name="ndc" value="20" placeholder="20" step="1" min="1">
+                <label for="parametros">Maximo de rodadas:</label>
+                <input type="number" id="mr" name="mr" value="1000" placeholder="1000" step="1" min="1">
+                <label for="parametros">Valor maximo de venda:</label>
+                <input type="number" id="mv" name="mv" value="1000" placeholder="1000" step="1" min="1">
+                <label for="parametros">Porcentagem minima de venda:</label>
+                <input type="number" id="pmv" name="pmv" value=".75" placeholder=".75" step=".01" min=".01" max="1">
+                <label for="parametros">Porcentagem do aluguel:</label>
+                <input type="number" id="pa" name="pa" value=".25" placeholder=".25" step=".01" min=".01" max="1">
+                <label for="parametros">Bonus da rodada:</label>
+                <input type="number" id="bdr" name="bdr" value="100" placeholder="100" step="1" min="1">
+                <input type="submit" value="Simula">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
+
+
+

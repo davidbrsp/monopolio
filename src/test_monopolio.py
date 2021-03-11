@@ -32,7 +32,8 @@ class TestMonopolio(unittest.TestCase):
         mp.simulacao()
         assert mp.numero_de_casas > 0 and type(mp.numero_de_casas) == int
         # assert mp.numero_de_casas > 0 and isinstance(mp.numero_de_casas, int)
-        assert mp.simulacao.call_count == 0
+        assert mp.simulacao.call_count == 1
+
 
 if __name__ == '__main__':
     unittest.main()
