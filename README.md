@@ -44,7 +44,7 @@ Caso queira também é possível usar Docker para executar a aplicacao, para iss
 
 * **Bonus da rodada** (Default: 100)
 
-    Quando o jogador ganha a cada rodada
+    Quanto o jogador ganha a cada rodada
 
 ## Melhorias a serem implantadas (trabalho em progresso):
 
